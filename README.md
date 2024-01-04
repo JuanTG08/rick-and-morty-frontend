@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Proyecto Frontend - Rick and Morty App
 
-## Getting Started
+Este proyecto Frontend utiliza [Next.js](https://nextjs.org/) y [Material-UI](https://material-ui.com/) para crear una aplicación web que muestra información sobre los personajes de la serie de televisión "Rick and Morty".
 
-First, run the development server:
+## Tecnologías Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js:** Marco de desarrollo web React con enfoque en la facilidad de uso y rendimiento.
+- **Material-UI:** Librería de componentes de interfaz de usuario basada en React que sigue los principios del diseño de Material Design.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Configuración del Proyecto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clonar el Repositorio:**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   git clone https://github.com/JuanTG08/rick-and-morty-frontend.git
+   cd rick-and-morty-frontend
+   ```
 
-## Learn More
+2. **Instalar Dependencias:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Ejecución del Proyecto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Ejecutar el proyecto:**
 
-## Deploy on Vercel
+   ```bash
+   npm run build
+   npm start
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+El aplicativo se iniciará en el puerto `3000` [`localhost:3000`](http://localhost:3000/).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Funciones Principales
+
+1. **Explorar el Multiverso de Rick and Morty:**
+   - La página principal muestra una selección de personajes del universo de Rick and Morty.
+
+2. **Filtrar por Especies:**
+   - Utiliza un menú desplegable para permitir a los usuarios filtrar los personajes por especies.
+   - Dos opciones disponibles: "Humano" y "No humano".
+
+3. **Visualización de Personajes Humanos:**
+   - Cuando se selecciona "Humano", se muestran los personajes que pertenecen a la especie humana.
+
+4. **Visualización de Personajes No Humanos:**
+   - Cuando se selecciona "No humano", se muestran los personajes que no son de la especie no humana.
+
+5. **Paginación Dinámica:**
+   - Implementa una paginación dinámica para manejar grandes conjuntos de datos de la API de Rick and Morty.
+   - Los usuarios pueden navegar a través de las páginas para ver más personajes.
+
+6. **Interacción con la API:**
+   - Utiliza el controlador `RickAndMortyController` para realizar solicitudes a la API de nuestro backend para obtener la información relacionada a los personajes de Rick And Morty.
+
+7. **Diseño Atractivo con Material-UI:**
+   - Utiliza componentes de Material-UI para un diseño atractivo y una experiencia de usuario mejorada.
+
+### Estructura del Proyecto
+
+La estructura del proyecto sigue las convenciones de Next.js y Material-UI, con carpetas organizadas de manera lógica con un enfoque en MVC.
+
+- **src/ :** Contiene los archivos fuente del proyecto.
+      - **app/ :** En este directorio encontramos las páginas de la aplicación las cuales serán servidas en el momento en el que sean consultadas.
+      - **components/ :**
+      Componentes reutilizables utilizados en las páginas.
+      - **constant/ :** Constantes por las cuales el aplicativo funcionará para prevenir magics strings.
+      - **controllers/ :** Controladores que manejan la lógica y la conexión al fetching de datos.
+      - **fetching/ :** Se almacenaran todas las consultas fetch que se hacen en el aplicativo, estas consultaran a la API principal para obtener información relevante.
+      - **interfaces/ :** Interfaces que nos ayudan a dar un tipado a las variables o constantes.
+      - **utils/ :** Utilidades y funciones de ayuda.

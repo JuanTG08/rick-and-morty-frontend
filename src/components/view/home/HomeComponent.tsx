@@ -81,9 +81,6 @@ const HomeComponent = ({ data }: any) => {
         </FormControl>
       </div>
       <div className="flex-col">
-        <h2 className="text-xl font-semibold flex gap-x-3 items-center">
-          Human
-        </h2>
         <Grid container spacing={3}>
           {characters.map((character: iCharacter, ind: number) => (
             <CardHomeComponent key={ind} character={character} />
